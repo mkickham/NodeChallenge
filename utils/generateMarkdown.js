@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'none') {
-    return `![github licensse](https://img.shields.io/badge/license-${license}-green-svg.)`;
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   }
   return " ";
 }
@@ -20,9 +20,9 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === 'MIT'){
-    return `## License`
+    return `## License
     
-      `MIT License
+      MIT License
 
       Copyright (c) [year] [fullname]
     
@@ -56,7 +56,7 @@ function generateMarkdown(data) {
   * [description](#description)
   * [credit](#credit)
   * ${renderLicenseLink(data.license)}
-  ## Descruption
+  ## Description
   ${data.description}
   ## Credits
   ${data.credit}
